@@ -1,0 +1,51 @@
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+.custom-card {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    width: 60%;
+}
+
+.custom-card:hover {
+    transform: scale(1.05);
+}
+
+.card-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.btn-success {
+    font-size: 1rem;
+    padding: 8px 16px;
+    position: relative;
+}
+
+.love-animation {
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    font-size: 2rem;
+    opacity: 1;
+    animation: loveFly 1s ease-in-out forwards;
+}
+
+@keyframes loveFly {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+}
