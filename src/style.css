@@ -3,33 +3,109 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.custom-card {
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
-    width: 60%;
+/* AG Grid custom styles */
+.ag-theme-alpine {
+    --ag-header-height: 50px;
+    --ag-header-background-color: #f8f9fa;
+    --ag-header-foreground-color: #333;
+    --ag-row-hover-color: #f5f5f5;
+    --ag-selected-row-background-color: #e7f4ff;
+    --ag-font-size: 14px;
+    --ag-font-family: Arial, sans-serif;
+    --ag-cell-horizontal-padding: 12px;
+    --ag-row-height: 48px;
 }
 
-.custom-card:hover {
-    transform: scale(1.05);
-}
-
-.card-title {
-    font-size: 1.8rem;
+.ag-theme-alpine .ag-header-cell {
     font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.card-text {
-    font-size: 1.2rem;
-    color: #555;
+.ag-theme-alpine .ag-cell {
+    padding: 8px;
+    display: flex;
+    align-items: center;
 }
 
-.btn-success {
-    font-size: 1rem;
-    padding: 8px 16px;
-    position: relative;
+/* Action buttons styling */
+.action-buttons-container {
+    display: flex;
+    gap: 5px;
+    justify-content: flex-start;
+    align-items: center;
 }
 
+.action-buttons-container .btn {
+    min-width: 55px;
+    font-weight: 500;
+    border-radius: 3px;
+    padding: 4px 8px;
+    font-size: 13px;
+}
+
+.action-buttons-container .btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.action-buttons-container .btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.action-buttons-container .btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #000;
+}
+
+.action-buttons-container .btn-warning:hover {
+    background-color: #e0a800;
+    border-color: #d39e00;
+}
+
+.action-buttons-container .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    min-width: 35px;
+    padding: 4px 6px;
+}
+
+.action-buttons-container .btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+/* Form styling */
+.form-control {
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    padding: 8px 12px;
+}
+
+.form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Modal styling */
+.modal-content {
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    border-bottom: 1px solid #dee2e6;
+    padding: 1rem 1.5rem;
+}
+
+.modal-footer {
+    border-top: 1px solid #dee2e6;
+    padding: 1rem 1.5rem;
+}
+
+/* Animation */
 .love-animation {
     position: absolute;
     right: 10px;
