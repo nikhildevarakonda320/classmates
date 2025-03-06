@@ -17,15 +17,17 @@ https://nikhildevarakonda320.github.io/classmates/
 
 1. In using the bootstrap cards
 
-2. In using the AG-Grid for the layout
+2. In using the AG-Grid for the layout and also for sorting and filtering of data.
 
-3. For using the map function
+3. For using the map function in the people function
 
 4. For using the filter function
 
-5. For using the useState function
+5. For using the useState function for performing the tasks like like, edit and delete
 
-6. For using the useEffect function
+6. For using the useEffect function for the performing the tasks like like, edit and delete and also for the dark and light mode.
 
+7. Applied the dark mode using the AI where i have used the dark mode and light mode.
 
+8.Used Ai for the mdom manupulation.
 
