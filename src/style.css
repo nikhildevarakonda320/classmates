@@ -125,3 +125,51 @@ body {
         opacity: 0;
     }
 }
+
+/* Light mode styles */
+body.light-mode {
+    background-color: #f8f9fa;
+    color: #333333;
+}
+
+body.dark-mode {
+    background-color: #222222;
+    color: #ffffff;
+}
+
+.dark-mode .container {
+    background-color: #333333;
+}
+
+.dark-mode .ag-theme-alpine {
+    --ag-background-color: #444444;
+    --ag-header-background-color: #333333;
+    --ag-header-foreground-color: #ffffff;
+    --ag-foreground-color: #ffffff;
+    --ag-row-hover-color: #555555;
+    --ag-selected-row-background-color: #666666;
+    --ag-border-color: #555555;
+}
+
+.dark-mode .form-control {
+    background-color: #444444;
+    color: #ffffff;
+    border-color: #555555;
+}
+
+.dark-mode .form-control::placeholder {
+    color: #aaaaaa;
+}
+
+.dark-mode .modal-content {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.dark-mode .modal-header {
+    border-bottom-color: #555555;
+}
+
+.dark-mode .modal-footer {
+    border-top-color: #555555;
+}

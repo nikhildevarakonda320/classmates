@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 import { Button, Form, Modal } from "react-bootstrap";
@@ -20,6 +20,23 @@ const App = () => {
   const [newProfile, setNewProfile] = useState({ name: "", favoriteFood: "", favoriteColor: "" });
   const [editProfile, setEditProfile] = useState(null);
   const [showModal, setShowModal] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
+
+  ///Added the functionality for the user to toggle the theme
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
+  // Apply dark mode class to body element
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add('dark-mode');
+      document.body.classList.remove('light-mode');
+    } else {
+      document.body.classList.add('light-mode');
+      document.body.classList.remove('dark-mode');
+    }
+  }, [darkMode]);
 
 
   ///Added the functionality for the user to add the data and edit the data
@@ -88,7 +105,15 @@ const App = () => {
   ///Added the functionality for the user to view the data
   return (
     <div className="container mt-4">
-      <h2>My Class Mates</h2>
+      <div className="d-flex justify-content-between align-items-center mb-3">
+        <h2>My Class Mates</h2>
+        <Button 
+          variant={darkMode ? "light" : "dark"} 
+          onClick={toggleDarkMode}
+        >
+          {darkMode ? "Light Mode" : "Dark Mode"}
+        </Button>
+      </div>
 
       {/* Form for the user to enter the user details */}
       <Form className="mb-3">
