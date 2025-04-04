@@ -4,9 +4,11 @@
 /node_modules
 /.pnp
 .pnp.js
+/server/node_modules
 
 # testing
 /coverage
+/server/coverage
 
 # production
 /build
@@ -17,7 +19,35 @@
 .env.development.local
 .env.test.local
 .env.production.local
+.env
 
+# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# database files
+/server/classmates.db
+/server/classmates.db-journal
+*.sqlite
+*.sqlite3
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Debug logs
+logs
+*.log
