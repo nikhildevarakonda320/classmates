@@ -173,3 +173,78 @@ body.dark-mode {
 .dark-mode .modal-footer {
     border-top-color: #555555;
 }
+
+/* Add these styles to your existing CSS file */
+.dark-mode .table {
+  background-color: #343a40;
+  color: #f8f9fa;
+}
+
+.dark-mode .table th,
+.dark-mode .table td {
+  border-color: #495057;
+  color: #f8f9fa;
+}
+
+.dark-mode .card {
+  background-color: #343a40;
+  color: #f8f9fa;
+  border-color: #495057;
+}
+
+.dark-mode .form-control {
+  background-color: #495057;
+  color: #f8f9fa;
+  border-color: #6c757d;
+}
+
+.dark-mode .form-control::placeholder {
+  color: #adb5bd;
+}
+
+/* Add these specific styles for the table in dark mode */
+.dark-mode {
+  background-color: #121212;
+  color: #f8f9fa;
+}
+
+.dark-mode .container {
+  background-color: #121212;
+  color: #f8f9fa;
+}
+
+.dark-mode table {
+  background-color: #343a40;
+  color: #f8f9fa;
+}
+
+.dark-mode th,
+.dark-mode td {
+  background-color: #343a40;
+  color: #f8f9fa;
+  border-color: #495057;
+}
+
+.dark-mode .table {
+  color: #f8f9fa;
+}
+
+.dark-mode .table-striped tbody tr:nth-of-type(odd) {
+  background-color: #2c3034;
+}
+
+/* Make sure buttons remain visible in dark mode */
+.dark-mode .btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.dark-mode .btn-warning {
+  background-color: #ffc107;
+  border-color: #ffc107;
+}
+
+.dark-mode .btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}

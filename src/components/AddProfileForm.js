@@ -1,40 +1,57 @@
 import React from "react";
-import { Button, Form } from "react-bootstrap";
 
 const AddProfileForm = ({ newProfile, setNewProfile, addProfile }) => {
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setNewProfile({ ...newProfile, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    addProfile();
+  };
+
   return (
-    <Form className="mb-3">
-      <Form.Group>
-        <Form.Control 
-          type="text" 
-          placeholder="Name" 
-          value={newProfile.name} 
-          onChange={(e) => setNewProfile({ ...newProfile, name: e.target.value })} 
-        />
-        <Form.Control 
-          type="text" 
-          placeholder="Favorite Food" 
-          value={newProfile.favoriteFood} 
-          onChange={(e) => setNewProfile({ ...newProfile, favoriteFood: e.target.value })} 
-          className="mt-2" 
-        />
-        <Form.Control 
-          type="text" 
-          placeholder="Favorite Color" 
-          value={newProfile.favoriteColor} 
-          onChange={(e) => setNewProfile({ ...newProfile, favoriteColor: e.target.value })} 
-          className="mt-2" 
-        />
-      </Form.Group>
-      <Button 
-        variant="primary" 
-        className="mt-3" 
-        onClick={addProfile}
-        disabled={!newProfile.name || !newProfile.favoriteFood || !newProfile.favoriteColor}
-      >
-        Add Profile
-      </Button>
-    </Form>
+    <form onSubmit={handleSubmit}>
+      <div className="row g-3 mb-3">
+        <div className="col-md-4">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Name"
+            name="name"
+            value={newProfile.name}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="col-md-4">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Favorite Food"
+            name="favoriteFood"
+            value={newProfile.favoriteFood}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="col-md-4">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Favorite Color"
+            name="favoriteColor"
+            value={newProfile.favoriteColor}
+            onChange={handleChange}
+            required
+          />
+        </div>
+      </div>
+      <button type="submit" className="btn btn-primary">
+        Add Classmate
+      </button>
+    </form>
   );
 };
 
